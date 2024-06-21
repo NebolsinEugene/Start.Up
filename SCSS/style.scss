@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+h1 {
+}
+.container {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body {
+  font-family: "Jura", sans-serif;
+}
+button {
+  @extend body;
+  font-size: 20px;
+  padding: 13px 30px;
+  border-radius: 15px;
+  border: none;
+  margin: 0 0 0 32px;
+  position: relative;
+}
+.header {
+  font-size: 20px;
+
+  h1 {
+    font-size: 40px;
+    font-family: "Unbounded", sans-serif;
+    margin: 25px 228px 25px 0;
+    padding: 0;
+  }
+
+  .menu {
+    margin-left: auto;
+  }
+  nav li {
+    display: inline-flex;
+    margin-left: 32px;
+  }
+  //   nav ul {
+  //     list-style: none;
+  //     margin: 0;
+  //     padding: 0;
+  //   }
+  //   nav a {
+  //     color: black;
+  //     display: block;
+  //   }
+}
+.intro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+.intro_media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ccc;
+  background-size: cover;
+}
+
+.intro_media::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.intro_media-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.intro_content {
+  z-index: 10;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 128px;
+  }
+  p {
+    font-size: 26px;
+    max-width: 617px;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.partners-content {
+  max-height: 480px;
+  p {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "Jura", sans-serif;
+    margin: 50px;
+  }
+  h1 {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.scroll-parent {
+  position: relative;
+  width: 100vw;
+  height: 20rem;
+  margin: 50px 0;
+  overflow-x: hidden;
+}
+
+.scroll-element {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.scroll-element img {
+  width: 10%;
+}
+
+.primary {
+  animation: primary 25s linear infinite;
+}
+
+.secondary {
+  animation: secondary 25s linear infinite;
+}
+
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes secondary {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.bricks {
+  margin-top: 130px;
+}
+.big-brick {
+  height: 400px;
+  width: 730px;
+  break-inside: avoid;
+  background-color: lightgray;
+  border-radius: 40px;
+
+  h3 {
+    padding: 30px 0 15px 40px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 26px;
+  }
+  p {
+    padding: 0 40px;
+    font-family: "Jura", sans-serif;
+    font-size: 26px;
+  }
+}
+
+.small-brick {
+  height: 400px;
+  width: 515px;
+  break-inside: avoid;
+  background-color: lightgray;
+  border-radius: 40px;
+  max-width: 100%;
+  h3 {
+    padding: 30px 0 15px 40px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 26px;
+  }
+  p {
+    padding: 0 40px;
+    font-family: "Jura", sans-serif;
+    font-size: 26px;
+  }
+}
+
+.top-row {
+  display: grid;
+  grid-template-columns: 730px 515px;
+  column-gap: 32px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.bottom-row {
+  @extend .top-row;
+  grid-template-columns: 515px 730px;
+}
+.join-us {
+  margin-top: 130px;
+}
+.join-us-content {
+  @extend .partners-content;
+  p {
+    margin-bottom: 35px;
+  }
+  @extend button;
+}
+footer {
+  margin-top: 130px;
+  padding: 36px;
+}
+
+.footer-social {
+  h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+  }
+  img {
+    padding: 20px;
+  }
+  p {
+    font-family: "Jura", sans-serif;
+    margin-top: 6px;
+    font-size: 26px;
+  }
+}
+nav {
+  padding: 65px;
+  li {
+    padding-top: 9px;
+  }
+}
+.footer-nav {
+  margin-left: 65px;
+  p {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  display: flex;
+  text-align: left;
+}
